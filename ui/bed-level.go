@@ -18,10 +18,11 @@ type bedLevelPanel struct {
 func BedLevelPanel(ui *UI, parent Panel) Panel {
 	if bedLevelPanelInstance == nil {
 		m := &bedLevelPanel{CommonPanel: NewCommonPanel(ui, parent)}
+		m.panelH = 2
+		m.panelW = 4
 		m.initialize()
 		bedLevelPanelInstance = m
 	}
-
 	bedLevelPanelInstance.homed = false
 	return bedLevelPanelInstance
 }

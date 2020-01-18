@@ -27,8 +27,9 @@ func FilamentPanel(ui *UI, parent Panel) Panel {
 		m := &filamentPanel{CommonPanel: NewCommonPanel(ui, parent),
 			labels: map[string]*LabelWithImage{},
 		}
-		m.panelH = 3
 		m.b = NewBackgroundTask(time.Second*5, m.updateTemperatures)
+		m.panelH = 3
+		m.panelW = 4
 		m.initialize()
 		filamentPanelInstance = m
 	}

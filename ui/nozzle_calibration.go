@@ -30,6 +30,7 @@ func NozzleCalibrationPanel(ui *UI, parent Panel) Panel {
 	if nozzleCalibrationPanelInstance == nil {
 		m := &nozzleCalibrationPanel{CommonPanel: NewCommonPanel(ui, parent)}
 		m.panelH = 3
+		m.panelW = 4
 		m.cPoint = pointCoordinates{x: 20, y: 20, z: 0}
 		m.initialize()
 

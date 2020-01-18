@@ -28,6 +28,8 @@ func TemperaturePanel(ui *UI, parent Panel) Panel {
 		}
 
 		m.b = NewBackgroundTask(time.Second, m.updateTemperatures)
+		m.panelH = 2
+		m.panelW = 4
 		m.initialize()
 
 		temperaturePanelInstance = m

@@ -9,6 +9,8 @@ type printMenuPanel struct {
 func PrintMenuPanel(ui *UI, parent Panel) Panel {
 	if printMenuPanelInstance == nil {
 		m := &printMenuPanel{CommonPanel: NewCommonPanel(ui, parent)}
+		m.panelH = 2
+		m.panelW = 4
 		m.initialize()
 		printMenuPanelInstance = m
 	}
@@ -18,6 +20,7 @@ func PrintMenuPanel(ui *UI, parent Panel) Panel {
 
 func (m *printMenuPanel) initialize() {
 	defer m.Initialize()
+	
 	m.Grid().Attach(MustButtonImageStyle("Temperature", "heat-up.svg", "color4", m.showTemperature), 1, 0, 1, 1)
 	m.Grid().Attach(MustButtonImageStyle("Fan", "fan.svg", "color2", m.showFan), 2, 0, 1, 1)
 	m.Grid().Attach(MustButtonImageStyle("Network", "network.svg", "color1", m.showNetwork), 3, 0, 1, 1)

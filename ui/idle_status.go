@@ -24,6 +24,7 @@ func IdleStatusPanel(ui *UI) Panel {
 	if idleStatusPanelInstance == nil {
 		m := &idleStatusPanel{CommonPanel: NewCommonPanel(ui, nil)}
 		m.panelH = 3
+		m.panelW = 4
 		m.b = NewBackgroundTask(time.Second*2, m.update)
 		m.initialize()
 

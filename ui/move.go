@@ -16,6 +16,7 @@ func MovePanel(ui *UI, parent Panel) Panel {
 	if movePanelInstance == nil {
 		m := &movePanel{CommonPanel: NewCommonPanel(ui, parent)}
 		m.panelH = 3
+		m.panelW = 4 
 		m.initialize()
 		movePanelInstance = m
 	}

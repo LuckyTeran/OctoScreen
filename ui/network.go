@@ -20,6 +20,8 @@ type networkPanel struct {
 func NetworkPanel(ui *UI, parent Panel) Panel {
 	if networkPanelInstance == nil {
 		m := &networkPanel{CommonPanel: NewCommonPanel(ui, parent)}
+		m.panelH = 1
+		m.panelW = 7
 		m.initialize()
 		m.b = NewBackgroundTask(time.Second*3, m.update)
 		networkPanelInstance = m

@@ -25,6 +25,7 @@ func FilamentMultitoolPanel(ui *UI, parent Panel) Panel {
 			labels: map[string]*LabelWithImage{},
 		}
 		m.panelH = 3
+		m.panelW = 4
 		m.b = NewBackgroundTask(time.Second*5, m.updateTemperatures)
 		m.initialize()
 		filamentMultitoolPanelInstance = m

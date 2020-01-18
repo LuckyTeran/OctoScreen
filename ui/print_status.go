@@ -25,6 +25,7 @@ func PrintStatusPanel(ui *UI) Panel {
 	if printStatusPanelInstance == nil {
 		m := &printStatusPanel{CommonPanel: NewCommonPanel(ui, nil)}
 		m.panelH = 3
+		m.panelW = 4
 		m.b = NewBackgroundTask(time.Second*2, m.update)
 		m.initialize()
 

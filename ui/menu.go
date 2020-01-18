@@ -56,7 +56,7 @@ func MenuPanel(ui *UI, parent Panel, items []octoprint.MenuItem) Panel {
 		items:       items,
 	}
 
-	m.panelH = 1 + len(items)/4
+	m.panelH = 1 + len(items)/m.panelW
 
 	m.initialize()
 	return m
@@ -64,7 +64,7 @@ func MenuPanel(ui *UI, parent Panel, items []octoprint.MenuItem) Panel {
 
 func (m *menuPanel) initialize() {
 	defer m.Initialize()
-	m.arrangeMenuItems(m.g, m.items, 4)
+	m.arrangeMenuItems(m.g, m.items, m.panelW)
 }
 
 func getDeafultMenu() []octoprint.MenuItem {

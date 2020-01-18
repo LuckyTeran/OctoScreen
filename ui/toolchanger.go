@@ -18,6 +18,7 @@ func ToolchangerPanel(ui *UI, parent Panel) Panel {
 	if toolchangerPanelInstance == nil {
 		m := &toolchangerPanel{CommonPanel: NewCommonPanel(ui, parent)}
 		m.panelH = 3
+		m.panelW = 4
 		m.initialize()
 
 		toolchangerPanelInstance = m

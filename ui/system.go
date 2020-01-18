@@ -22,6 +22,7 @@ func SystemPanel(ui *UI, parent Panel) *systemPanel {
 	if systemPanelInstance == nil {
 		m := &systemPanel{CommonPanel: NewCommonPanel(ui, parent)}
 		m.panelH = 3
+		m.panelW = 4
 		m.initialize()
 		systemPanelInstance = m
 	} else {
